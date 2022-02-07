@@ -1,0 +1,378 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+/* Header*/
+
+.header__nav {
+  background-color: white;
+}
+
+.my_style_btn {
+  padding: 11px 37px;
+  border: none;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #fd749b;
+  background-image: -moz-linear-gradient(top, #fd749b 0%, #281ac8 100%);
+  background-image: -webkit-linear-gradient(top, #fd749b 0%, #281ac8 100%);
+  background-image: -o-linear-gradient(top, #fd749b 0%, #281ac8 100%);
+  background-image: -ms-linear-gradient(top, #fd749b 0%, #281ac8 100%);
+}
+
+.header_down {
+  height: 100%;
+  background: rgb(40, 26, 200);
+  background: linear-gradient(
+    0deg,
+    rgba(40, 26, 200, 1) 0%,
+    rgba(253, 116, 155, 1) 99%
+  );
+}
+
+.text_block {
+  margin-top: 192px;
+}
+
+.text_block > h1 {
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.header_text {
+  color: white;
+}
+
+.header_down_btn {
+  margin-top: 45px;
+  padding: 11px 37px;
+  border: 3px solid #fff;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #a850ad;
+  background-color: #ffffff;
+}
+
+#header_img {
+  margin-top: 150px;
+  margin-left: 30px;
+}
+
+.parallax > use {
+  animation: move-forever 12s linear infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -2s;
+  animation-duration: 5s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 3s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+.editorial {
+  display: block;
+  width: 100%;
+  height: 16em;
+  max-height: 100vh;
+  margin: 0;
+}
+
+/*prevent many large-by-comparison ripples by shrinking the height*/
+@media (max-width: 50em) {
+  .content h1 {
+    font-size: 12vmax;
+  }
+
+  .editorial {
+    height: 17vw;
+  }
+}
+
+/*WElcom section */
+
+.welcom_img {
+	margin-top: -30px;
+	margin-bottom: 20px;
+}
+ 
+
+.welcom_text > h2 {
+color: #a850ad;
+font-weight: 700;
+}
+
+.welcom_border {
+	border-bottom: 10px red solid;
+	border-radius: 20em;
+	width: 50px;
+	margin-top: 10px;
+}
+
+.welcom_text > p {
+	margin-top: 20px;
+	margin-bottom: 40px;
+font-size: 17px;
+font-weight: 500;
+line-height: 40px;
+}
+
+/*our service*/
+.service {
+	background: rgb(40,26,200);
+background: linear-gradient(0deg, rgba(40,26,200,1) 0%, rgba(253,116,155,1) 99%);
+ 
+}
+
+.border_service {
+	background: #ffffff;
+	margin-top: 100px;
+	margin-bottom: 150px;
+}
+.service_top_text  {
+ display: flex;
+justify-content: space-evenly;
+color: #a850ad;
+font-weight: 700;
+font-size: 18px;
+text-transform: uppercase;
+border-bottom: 1px #bbbbbb solid;
+margin-top: 23px;
+padding-bottom: 23px;
+}
+
+.border_service {
+	border: 1px solid #fff;
+	border-radius: 5em;
+}
+
+.service_buttom {
+	padding: 120px 120px;
+}
+
+.rotate {
+	transform: rotate(180deg);
+}
+
+.greate {
+	margin-top: 80px;
+}
+
+.greate > img {
+	margin-top: -90px;
+}
+
+/*traide*/
+
+.traide {
+	margin-top: 130px;
+	background: rgb(40,26,200);
+background: linear-gradient(0deg, rgba(40,26,200,1) 0%, rgba(253,116,155,1) 99%);
+}
+
+
+ .traide_border {
+	 margin: 0 auto;
+	background: #ffffff;
+	margin-top: 120px;
+	border-radius: 5em;
+	z-index: 5;
+-webkit-box-shadow: 0px 1px 28px 11px rgba(34, 60, 80, 0.12);
+-moz-box-shadow: 0px 1px 28px 11px rgba(34, 60, 80, 0.12);
+box-shadow: 0px 1px 28px 11px rgba(34, 60, 80, 0.12);
+ }
+
+ .titile_traide {
+	 text-align: center;
+	 border-bottom: 3px solid rgb(164, 70, 252);
+ 
+ }
+
+ .titile_traide > h2 {
+	color: #a850ad;
+font-weight: 700;
+margin-top: 75px;
+ }
+
+ .card_1 {
+	 border: #a850ad 1px solid;
+	 padding: 103px 103px 103px 103px;
+	 border-radius: 15px;
+	 margin-top: 60px;
+	 margin-bottom: 85px;
+	 cursor: pointer;
+	 z-index: 0;
+ 
+ }
+
+ .card_1 > img {
+	 z-index: 1;
+ }
+
+ .card_1:hover {
+ 
+	 transition: opacity 0.5s ease-in-out;
+	 background: rgb(40,26,200);
+background: linear-gradient(0deg, rgba(40, 26, 200, 0.267) 0%, rgba(253, 116, 155, 0.123) 99%);
+ }
+
+ 
+
+ .wave_traide {
+	 margin-top: -300px;
+	 z-index: -5;
+ }
+
+
+ /*contsct_us*/
+
+ .contsct_us {
+	 margin-top: 300px;
+ }
+
+ #title_contactUs {
+	 margin-bottom: 80px;
+	 font-weight: 800;
+ }
+
+ input {outline:none;}
+ .input_stile:focus {
+	border: 1px solid red;
+ }
+
+/*media*/
+
+@media screen and (max-width: 991px) {
+	.header_text {font-size: 23px;}
+	.welcom_img {margin-top: 150px;}
+	.welcom_text > p {font-size: 15px;}
+	.greate > img {margin-top: -50px;}
+	.card_1 {padding: 80px;}
+	 .contsct_us {margin-top: 250px;}
+}
+
+@media screen and (max-width: 767px) {
+	.text_block > p {
+		display: none;
+	}
+	.header_text {font-size: 18px;}
+	.welcom_img {margin-top: 90px;
+	width: 150%;}
+	.welcom_text  {
+		margin-left: 130px;
+	}
+	.welcom_text > p {
+		font-size: 15px;
+	line-height: 25px;
+}
+	.greate > img {margin-top: -20px;}
+	.card_1 {padding: 80px;}
+	 .contsct_us {margin-top: 250px;}
+}
+
+
+@media screen and (max-width: 767px) {
+	.parallax {
+		width: 100px;
+	}
+	#header_img {
+  margin-left: 10px;
+}
+
+.service_buttom {
+	padding: 50px 50px;
+}
+.service_buttom > p{
+	font-size: 13px;
+}
+
+	.card_1 {padding: 40px;}
+}
